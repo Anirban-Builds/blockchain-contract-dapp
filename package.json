@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@huggingface/hub": "^2.11.2",
     "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.5",
     "@types/express": "^5.0.6",
     "@types/mongoose": "^5.11.96",
@@ -21,7 +22,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@huggingface/hub": "^2.11.2",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "ethers": "^6.16.0",
