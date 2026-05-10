@@ -19,6 +19,9 @@ jobs:
           git lfs install
           git lfs migrate import --include="*.png,*.jpg,*.jpeg" --everything
 
+      - name: Debug token
+        run: |
+            echo "Token: $HF_TOKEN"
       - name: Create HF Space if not exists
         run: |
             npm install
