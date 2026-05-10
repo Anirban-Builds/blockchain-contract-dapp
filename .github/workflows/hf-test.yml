@@ -20,7 +20,7 @@ jobs:
           git lfs migrate import --include="*.png,*.jpg,*.jpeg" --everything
 
       - name: Create HF Space if not exists
-        run: node scripts/hf-space.js
+        run: node src/scripts/hf-space.js
 
       - name : Push to HF
         run: |
