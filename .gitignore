@@ -1,0 +1,14 @@
+node_modules
+/dist
+/bundle
+/artifacts
+/cache
+/types
+.env
+.env.*
+!.env.example
+/coverage
+/.gas-snapshot
+/snapshots
+.vscode_hardhat_config*
+env
