@@ -1,7 +1,6 @@
-# Sample Hardhat 3 Beta Project (minimal)
+---
+title: Blockchain Contract Dapp
+sdk : docker
+---
 
-This project has a minimal setup of Hardhat 3 Beta, without any plugins.
-
-## What's included?
-
-The project includes native support for TypeScript, Hardhat scripts, tasks, and support for Solidity compilation and tests.
+Project Hosted at : [HF spaces](https://huggingface.co/spaces/Anirban0011/blockchain-contract-dapp/tree/main)
