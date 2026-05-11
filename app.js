@@ -17,7 +17,7 @@ app.use(express.static('public'))
 app.use('/contracts', contractRouter)
 
 app.get("/", (req, res) => {
-  res.send("Backend is Live 🚀")
+  res.send(`<body style="background:#0f0f0f;color:#fff">Backend is Live 🚀</body>`)
 })
 
 export default app
