@@ -54,7 +54,7 @@ const handleListContracts = Asynchandler(async(req, res)=>{
     const contractlist = []
     const user = await users.findOne({user : walletid})
     if(!user){
-        throw new ApiError(402, "User not found")
+        throw new ApiError(404, "User not found")
     }
     if(user.contractlist.length){
     for(let i=0; i<user.contractlist.length; i++){
