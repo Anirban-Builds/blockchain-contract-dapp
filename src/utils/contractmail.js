@@ -3,6 +3,8 @@ import { MODE } from "../../constants.js"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
+console.log(MODE)
+
 const sendMail = async(to, walletid, URL, filename)=>{
     return await resend.emails.send({
         from : "Anirban Builds <sign-contract@anirbanbuilds.online>",
