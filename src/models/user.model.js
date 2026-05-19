@@ -4,7 +4,7 @@ import { types } from "node:util"
 
 const userSchema = new Schema({
     user : {type: String, required: true, unique : true},
-    email : {type : String, required : true},
+    email : {type : String},
     contractlist : {type: [mongoose.Schema.Types.ObjectId], default: []}
 }, {versionKey : false})
 

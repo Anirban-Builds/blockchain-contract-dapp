@@ -2,7 +2,8 @@ import { Router } from "express"
 import { handleContractSave,
         handleListContracts,
         handleSignContract,
-        handleWalletExists } from "../controllers/contract.controller.js"
+        handleWalletExists,
+        handleDeleteContract, } from "../controllers/contract.controller.js"
 import { upload } from "../middlewares/multer.middleware.js"
 
 const contractRouter = Router()
@@ -11,5 +12,6 @@ contractRouter.route('/save-contract').post(upload.single("contract"), handleCon
 contractRouter.route('/list-contracts').post(handleListContracts)
 contractRouter.route('/sign-contract').post(handleSignContract)
 contractRouter.route('/check-wallet').post(handleWalletExists)
+contractRouter.route('/delete-contract').post(handleDeleteContract)
 
 export default contractRouter

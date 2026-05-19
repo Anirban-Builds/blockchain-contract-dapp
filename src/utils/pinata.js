@@ -3,7 +3,7 @@ import fs from "fs"
 
 const pinata = new PinataSDK({
   pinataJwt: process.env.PINATA_JWT_SECRET,
-  pinataGateway: "teal-wrong-lamprey-772.mypinata.cloud"
+  pinataGateway: process.env.PINATA_CLOUD,
 })
 
 const pinataUpload = async(filepath, file)=>{
@@ -22,4 +22,4 @@ const pinataUpload = async(filepath, file)=>{
     }
 }
 
-export default pinataUpload
+export {pinataUpload, pinata}
