@@ -82,7 +82,7 @@ const handleListContracts = Asynchandler(async(req, res)=>{
             "create_time" : contract?.created_at,
             "sign_time" : contract?.completed_at,
             "ipfs_hash": contract?.ipfs_hash,
-            "tx_link" : contract?.tx_link,
+            "tx_hash" : contract?.tx_hash,
         })
     }
 }
@@ -123,7 +123,7 @@ const handleSignContract = Asynchandler(async(req, res)=>{
     const agreement_id = (await c.cnt() -1n).toString()
     const block = await provider.getBlock(receipt.blockNumber)
     const blockDate = new Date(block.timestamp * 1000)
-    const txlink = `https://amoy.polygonscan.com/tx/${tx.hash}`
+    // const txlink = `https://amoy.polygonscan.com/tx/${tx.hash}`
 
     const contractRes = await contracts.findByIdAndUpdate(contract_id,
         {
@@ -132,7 +132,7 @@ const handleSignContract = Asynchandler(async(req, res)=>{
                 status : 1,
                 agreement_id : agreement_id,
                 completed_at : blockDate,
-                tx_link : txlink,
+                tx_hash : tx.hash,
             }
         }
     )

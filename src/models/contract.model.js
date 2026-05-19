@@ -14,7 +14,7 @@ const contractSchema = new Schema({
     agreement_id: { type: Number, default: null },
     created_at :{ type: Date, default: Date.now },
     completed_at: { type: Date, default: null },
-    tx_link : {type: String, default: ""},
+    tx_hash : {type: String, default: ""},
     pinata_id : {type: String, required: true},
 }, { versionKey: false })
 
